@@ -11,7 +11,6 @@ def selection_sort(li):
     min_index = index
     # loop through the remaining elements
     for cur_pos in range(index + 1, len(li)):
-      # Update the min_index if the element at cur_pos is lower than it
       # update the min_index if a smaller value is found at the current position
       if li[cur_pos] < li[min_index]:
         min_index = cur_pos
