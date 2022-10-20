@@ -12,12 +12,15 @@ def selection_sort(li):
     # it finds the highest and smallest number,
     # runs through the whole array, adds the smallest number to the sorted array
     # takes the smallest numer from the array 
-    for i in range(len(li) - 1):
-      min_val = i
-      for j in range(i+1, len(li)):
-        if li[j] < li[min_val]:
-          min_val = j
+    for i in range(len(li) - 1): # loop through the entire list
+      min_val = i # set the min val to the first i
+      print(f'set min_val to {li[i]}')
+      for j in range(i+1, len(li)): # create another loop where j is always the next index after i
+        if li[j] < li[min_val]: #if the second number is less than the 1st one
+          print(f'set min_val to {li[j]}')
+          min_val = j # set the second number in the list to be the min val
       li[i], li[min_val] = li[min_val], li[i]
+      print(f'switch low: {li[i]} with high: {li[min_val]}')
     return li
 
 
