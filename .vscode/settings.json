@@ -1,0 +1,6 @@
+{
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 40,
+    "html.format.wrapAttributes": "force",
+    "diffEditor.wordWrap": "on"
+}
