@@ -7,9 +7,9 @@ def is_sorted(ls):
 
 def selection_sort(li):
 	# implement your algorithm here
-	for start in range(0, len(li)):
+	for start in range(len(li) - 1):
 		storedIndex = start
-		for i in range(start, len(li)):
+		for i in range(start + 1, len(li)):
 			if li[i] < li[storedIndex]:
 				storedIndex = i
 		li[start], li[storedIndex] = li[storedIndex], li[start]
