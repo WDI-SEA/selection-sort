@@ -9,13 +9,13 @@ def selection_sort(li):
     # implement your algorithm here
     
 
-    for i in range(len(li)):
-      min = li[i]
-      for j in range(len(li)-i):
-        if(min>li[j]):
-          min = li[j]
+    for i in range(0,len(li)):
+      min = i
+      for j in range(i,len(li)):
+        if(li[min]>li[j]):
+          min = j
 
-      li[i] = min
+      li[i],li[min] = li[min],li[i]
 
       
 
@@ -24,3 +24,4 @@ li = [44, 41, 35, 34, 7, 8, 44, 38, 28, 44, 16, 31, 13, 31, 42, 19, 2, 47, 32, 1
 
 selection_sort(li)
 print(is_sorted(li)) # should return True
+print(li)
